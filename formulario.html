@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário de cadastro</h1>
+    <form action="post">
+        <!-- O uso do atributo ID serve mais para manipular controles do lado do cliente (client-side), 
+            e o atributo NAME serve mais para identificar valores do lado do servidor (server-side)-->
+        <table>
+            <tr>
+                <td><label for="nome">Email</label></td>
+                <td><input type="text" id="email"></td>            
+            </tr>
+
+            <tr>
+                <td><label for="senha">Senha</label></td>
+                <td><input type="text" id="senha"></td>
+            </tr>
+
+            <tr>
+                <td><label for="endereco">Endereço</label></td>
+                <td><textarea name="endereco id="endereco" cols="30" rows="3"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="disciplinas">Disciplinas</label></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" name="programacao" id="programacao"></td>
+                            <td><label for="programacao">Programacao</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="logica" id="logica"></td>
+                            <td><label for="logica">Lógica</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="algoritmos" id="algoritmos"></td>
+                            <td><label for="algoritmos">Algoritmos</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="banco" id="banco"></td>
+                            <td><label for="banco">Banco de Dados</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="mobile" id="mobile"></td>
+                            <td><label for="mobile">Mobile</label></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="genero">Genero</label></td>
+
+                <td>
+
+                    <!-- Atenção: tem que colocar o name igual para funcionar
+                         a propriedade de selecionar apenas um opção -->
+                    <input type="radio" name="sel" id="masc">
+                    <label for="masc">Masculino</label> 
+                    <input type="radio" name="sel" id="fem">
+                    <label for="fem">Feminino</label>
+                    <input type="radio" name="sel" id="ninf" checked="true">
+                    <label for="ninf">Não informar</label>
+
+                    <!-- Também poderia ser escrito desta forma, que o resultado é o mesmo de cima -->
+                    <!-- 
+                       <input type="radio" name="sel" id="masc">Masculino</input>
+                       <input type="radio" name="sel" id="fem">Feminino</input>
+                       <input type="radio" name="sel" id="ninf">Não informar</input> 
+                    -->
+                </td>
+            </tr>
+            
+
+            <tr>
+                <td><label for="idade">Faixa Etária</label></td>
+                <td>
+                    <select name="idade" id="idade">
+                        <option value="">Não informar</option>
+                        <option value="m18">Menor de 18 anos</option>
+                        <option value="e18e25">Entre 18 e 25 anos</option>
+                        <option value="e26e35">Entre 26 e 35 anos</option>
+                        <option value="e35e64">Entre 35 e 64 anos</option>
+                        <option value="m65">Maior que 65 anos</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="imagem">Foto de perfil</label></td>
+                <td><input type="file" name="imagem" id="imagem" required="true"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="cadastrar" name="cadastrar" id="cadastrar" />
+                    <input type="reset" value="Limpar" name="limpar" id="cadastrar">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
